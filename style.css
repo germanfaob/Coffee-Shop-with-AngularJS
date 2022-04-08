@@ -7,8 +7,13 @@
 /* Common */
 body {
     background-color: #302826ff;
+    height: 100vh;
 }
 
+a, a:visited, a:hover, a:active {
+  color: white;
+  text-decoration: none;
+}
 /* Header */
 nav {
     background-color: navy;
@@ -54,19 +59,23 @@ img{
     height: 150px;
 }
 
-
 /* Footer */
-footer>div {
-    border: 5px solid yellow;
+.footer {
+    color: #d8bca0;;
 }
-
 .footer-container {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
+    border: 5px solid yellow;
 }
 .list1 {
     border: 1px solid lime;
 }
 ul {
     list-style: none;
+}
+
+#social-media {
+    display: flex;
+    justify-content: space-evenly;
 }
