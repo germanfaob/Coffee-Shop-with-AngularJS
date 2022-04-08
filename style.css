@@ -27,14 +27,14 @@ nav ul li{
 }
 
 nav ul li:hover{
-    background-color: burlywood;
+    background-color: #d8bca0;
     color: lightslategray;
     opacity: 1;
 }
 
-#active{
+/* #active{
     background-color: burlywood;
-}
+} */
 
 nav ul li a{
     text-decoration: none;
@@ -49,12 +49,24 @@ nav ul li a:hover{
 
 
 /* Body */
-
-
-/* Footer */
-
-
 img{
     width: 200px;
     height: 150px;
+}
+
+
+/* Footer */
+footer>div {
+    border: 5px solid yellow;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-around;
+}
+.list1 {
+    border: 1px solid lime;
+}
+ul {
+    list-style: none;
 }
