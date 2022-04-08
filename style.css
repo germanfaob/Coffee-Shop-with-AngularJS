@@ -3,6 +3,13 @@
     margin: 0;
     padding: 0;
 }
+
+/* Common */
+body {
+    background-color: #302826ff;
+}
+
+/* Header */
 nav {
     background-color: navy;
     padding: 1em;
@@ -39,6 +46,13 @@ nav ul li a{
 nav ul li a:hover{
     color: black;
 }
+
+
+/* Body */
+
+
+/* Footer */
+
 
 img{
     width: 200px;
