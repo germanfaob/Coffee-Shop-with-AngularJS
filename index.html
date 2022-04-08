@@ -5,79 +5,28 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Coffee Shop</title>
+
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular-route.js"></script>
-    <style>
-    * {
-        box-sizing: border-box;
-        margin: 0;
-        padding: 0;
-    }
-    nav {
-        background-color: navy;
-        padding: 1em;
-        opacity: 0.7;
-    }
-    nav ul {
-        list-style-type: none;
-        display: flex;
-        justify-content: flex-end;
-    }
-    nav ul li{
-        padding: 1em;
-        margin: 0 1em 0 1em;
-        border-radius: 8px;
-    }
-
-    nav ul li:hover{
-        background-color: burlywood;
-        color: lightslategray;
-        opacity: 1;
-    }
-
-    #active{
-        background-color: burlywood;
-    }
-
-    nav ul li a{
-        text-decoration: none;
-        color: white;
-        opacity: 1;
-        font-size: 18px;
-    }
-
-    nav ul li a:hover{
-        color: black;
-    }
-
-    img{
-        width: 200px;
-        height: 150px;
-    }
-
-</style>
+    
+    <link rel="stylesheet" href="./style.css">
 
 </head>
 <body ng-app="spa_app">
     <nav>
         <ul>
             <li id="active"><a href="#/!">Home</a></li>
-            <li><a href="#">Whatever</a></li>
+            <li><a href="#">Product</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#"><i class="fas fa-shopping-cart"></i></a></li>
         </ul>
     </nav>
 
     <main ng-view>
         
     </main>
+    <script src="https://kit.fontawesome.com/3616aeb978.js" crossorigin="anonymous"></script>
+    
 </body>
 
-<script>
-    let SPA_App = angular.module('spa_app', ['ngRoute']);
-    SPA_App.config(function($routeProvider){
-            $routeProvider
-            .when("/",{templateUrl:"./pages/#",controller:"question1_controller"})
-            .when("/question2",{templateUrl:"./pages/#",controller:"question2_controller"})
-            .otherwise({templateUrl:"./pages/404.html"});
-        });
-</script>
 </html>
