@@ -54,6 +54,15 @@ nav ul li a:hover{
 
 
 /* Body */
+.slide-image {
+    border: 5px solid yellow;
+    margin: 3%;
+}
+.slide-image ul {
+    display: flex;
+    justify-content: space-between;
+}
+
 img{
     width: 200px;
     height: 150px;
