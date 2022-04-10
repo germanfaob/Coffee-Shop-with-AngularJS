@@ -54,6 +54,7 @@ nav ul li a:hover{
 
 
 /* Body */
+/* Image pics slider */
 .slide-image {
     border: 5px solid yellow;
     margin: 3%;
@@ -68,9 +69,22 @@ img{
     height: 150px;
 }
 
+/* New & Recommendation Items */
+.item-box {
+    display: flex;
+    justify-content: space-around;
+    border: 5px solid yellow;
+    margin: 3%;
+}
+h3 {
+    color: #d8bca0;
+    text-align: center;
+}
+
+
 /* Footer */
 .footer {
-    color: #d8bca0;;
+    color: #d8bca0;
 }
 .footer-container {
     display: flex;
