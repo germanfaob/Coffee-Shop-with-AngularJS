@@ -81,6 +81,14 @@ h3 {
     text-align: center;
 }
 
+/* Shop Blog */
+.shop-blog {
+    display: flex;
+    justify-content: space-around;
+    border: 5px solid yellow;
+    margin: 3%; 
+}
+
 
 /* Footer */
 .footer {
