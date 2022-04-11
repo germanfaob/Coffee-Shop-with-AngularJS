@@ -79,20 +79,20 @@ nav ul li a:hover{
     text-align: center;
     font-size: 3em;
     color: #d8bca0;
-    padding-top: 5%;
+    /* padding-top: 5%; */
 }
 
 /* Next arrow ">" */
 .next {
     float: right;
-    top: 0px;
+    top: -65%;
     right: 50px;
 }
 
 /* Back arrow "<" */
 .back {
     float: left;
-    bottom: 0px;
+    top: -65%;
     left: 30px;
 }
 
