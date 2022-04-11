@@ -58,16 +58,112 @@ nav ul li a:hover{
 .slide-image {
     border: 5px solid yellow;
     margin: 3%;
-}
-.slide-image ul {
-    display: flex;
-    justify-content: space-between;
+    max-width: 100%;
+    height: 400px;
+    margin: auto;
 }
 
-img{
+/* Image Position */
+.slideShow {
+    max-width: 100%;
+    height: 100%;
+    background-image: url(/img/coffee_1.jpg); /*First pic*/
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 0% 50%;  /* Left centre*/
+}
+
+/* Text */
+.disc {
+    margin: auto;
+    text-align: center;
+    font-size: 3em;
+    color: #d8bca0;
+    padding-top: 5%;
+}
+
+/* Next arrow ">" */
+.next {
+    float: right;
+    top: 0px;
+    right: 50px;
+}
+
+/* Back arrow "<" */
+.back {
+    float: left;
+    bottom: 0px;
+    left: 30px;
+}
+
+/* Arrow design */
+.arrow {
+    position: relative;
+    display: inline-block;
+    padding: 0 0 0 16px;
+    color: #000;
+    vertical-align: middle;
+    text-decoration: none;
+    font-size: 15px;
+}
+
+.arrow::before,
+.arrow::after{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    content: "";
+    vertical-align: middle;
+}
+
+.next::before{
+    left: 0px;
+    width: 30px;
+    height: 30px;
+    border-top: 5px solid rgb(255, 255, 255);
+    border-right: 5px solid rgb(255, 255, 255);
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+.back::before{
+    left: 0px;
+    width: 30px;
+    height: 30px;
+    border-bottom: 5px solid rgb(255, 255, 255);
+    border-left: 5px solid rgb(255, 255, 255);
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+/* Animation */
+.slideShow{
+    transition: background-image 1s ease-in;
+}
+
+
+@media screen and (max-width:768px) { 
+  .slide-image{
+    height: 250px;
+  }
+    .disc{
+        padding-top:5%;
+    }
+    /*>*/
+    .next{
+        top: 30px;
+    }
+    /*<*/
+    .back{
+        top: 30px;
+    }
+}
+
+/* img{
     width: 200px;
     height: 150px;
-}
+} */
 
 /* New & Recommendation Items */
 .item-box {
