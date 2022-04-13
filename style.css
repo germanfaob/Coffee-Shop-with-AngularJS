@@ -68,6 +68,7 @@ nav ul li a:hover{
     max-width: 100%;
     height: 100%;
     background-image: url(/img/coffee_1.jpg); /*First pic*/
+    opacity: .6;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: 0% 50%;  /* Left centre*/
@@ -75,11 +76,14 @@ nav ul li a:hover{
 
 /* Text */
 .disc {
+    border: 1px solid lime;
     margin: auto;
-    text-align: center;
-    font-size: 3em;
-    color: #d8bca0;
-    /* padding-top: 5%; */
+    text-align: left;
+    font-size: 1.5em;
+    color: whitesmoke;
+    position: absolute;
+    top: 25%;
+    left: 8%;
 }
 
 /* Next arrow ">" */
@@ -169,12 +173,20 @@ nav ul li a:hover{
 .item-box {
     display: flex;
     justify-content: space-around;
-    border: 5px solid yellow;
-    margin: 3%;
+    /* border: 5px solid yellow; */
+    /* margin: 3%; */
 }
 h3 {
     color: #d8bca0;
     text-align: center;
+}
+.item-box > .card {
+    margin: 3% 0;;
+    border: 1px solid lime;
+}
+.item-box > .card:hover {
+    transform: scale(1.1,1.1);
+    transition-duration: .5s;
 }
 
 /* Shop Blog */
