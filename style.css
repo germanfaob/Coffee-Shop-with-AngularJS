@@ -85,14 +85,14 @@ nav ul li a:hover{
 /* Next arrow ">" */
 .next {
     float: right;
-    top: -65%;
+    top: -50%;
     right: 50px;
 }
 
 /* Back arrow "<" */
 .back {
     float: left;
-    top: -65%;
+    top: -50%;
     left: 30px;
 }
 
