@@ -54,14 +54,157 @@ nav ul li a:hover{
 
 
 /* Body */
-img{
+/* Image pics slider */
+.slide-image {
+    border: 5px solid yellow;
+    margin: 3%;
+    max-width: 100%;
+    height: 400px;
+    margin: auto;
+}
+
+/* Image Position */
+.slideShow {
+    max-width: 100%;
+    height: 100%;
+    background-image: url(/img/coffee_1.jpg); /*First pic*/
+    opacity: .6;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 0% 50%;  /* Left centre*/
+}
+
+/* Text */
+.disc {
+    border: 1px solid lime;
+    margin: auto;
+    text-align: left;
+    font-size: 1.5em;
+    color: whitesmoke;
+    position: absolute;
+    top: 25%;
+    left: 8%;
+}
+
+/* Next arrow ">" */
+.next {
+    float: right;
+    top: -50%;
+    right: 50px;
+}
+
+/* Back arrow "<" */
+.back {
+    float: left;
+    top: -50%;
+    left: 30px;
+}
+
+/* Arrow design */
+.arrow {
+    position: relative;
+    display: inline-block;
+    padding: 0 0 0 16px;
+    color: #000;
+    vertical-align: middle;
+    text-decoration: none;
+    font-size: 15px;
+}
+
+.arrow::before,
+.arrow::after{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    content: "";
+    vertical-align: middle;
+}
+
+.next::before{
+    left: 0px;
+    width: 30px;
+    height: 30px;
+    border-top: 5px solid rgb(255, 255, 255);
+    border-right: 5px solid rgb(255, 255, 255);
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+.back::before{
+    left: 0px;
+    width: 30px;
+    height: 30px;
+    border-bottom: 5px solid rgb(255, 255, 255);
+    border-left: 5px solid rgb(255, 255, 255);
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+/* Animation */
+.slideShow{
+    transition: background-image 1s ease-in;
+}
+
+
+@media screen and (max-width:768px) { 
+  .slide-image{
+    height: 250px;
+  }
+    .disc{
+        padding-top:5%;
+    }
+    /*>*/
+    .next{
+        top: 30px;
+    }
+    /*<*/
+    .back{
+        top: 30px;
+    }
+}
+
+/* img{
     width: 200px;
     height: 150px;
+} */
+
+/* New & Recommendation Items */
+.item-box {
+    display: flex;
+    justify-content: space-around;
+    /* border: 5px solid yellow; */
+    /* margin: 3%; */
 }
+h3 {
+    color: #d8bca0;
+    text-align: center;
+}
+/* .item-box > .card {
+    margin: 3% 0;;
+    border: 1px solid lime;
+} */
+.bd-example:hover {
+    transform: scale(1.1,1.1);
+    transition-duration: .5s;
+}
+.countdown-timer {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Shop Blog */
+.shop-blog {
+    display: flex;
+    justify-content: space-around;
+    border: 5px solid yellow;
+    margin: 3%; 
+}
+
 
 /* Footer */
 .footer {
-    color: #d8bca0;;
+    color: #d8bca0;
 }
 .footer-container {
     display: flex;
