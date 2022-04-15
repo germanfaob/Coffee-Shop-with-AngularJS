@@ -180,13 +180,17 @@ h3 {
     color: #d8bca0;
     text-align: center;
 }
-.item-box > .card {
+/* .item-box > .card {
     margin: 3% 0;;
     border: 1px solid lime;
-}
-.item-box > .card:hover {
+} */
+.bd-example:hover {
     transform: scale(1.1,1.1);
     transition-duration: .5s;
+}
+.countdown-timer {
+    display: flex;
+    justify-content: space-between;
 }
 
 /* Shop Blog */
