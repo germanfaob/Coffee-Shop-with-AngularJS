@@ -43,6 +43,32 @@ window.onload = function(){
     right.addEventListener('click', nextImg, false);
 }
 
+// ********** Countdown Timer Part **********
+// to get the element from HTML
+let hour = document.getElementById("hour");
+let min = document.getElementById("min");
+let sec = document.getElementById("sec");
+
+//To get time remaining 
+function countdown(){
+    let current = new Date();
+    let tomorrow = new Date(current.getFullYear(), current.getMonth(), current.getDate()+1);
+    let timeGap = tomorrow.getTime() - current.getTime();
+    
+    //To modify the unit of time
+    let calcHour = Math.floor(timeGap / 1000 / 60 / 60);
+    let calcMin = Math.floor(timeGap / 1000 / 60) % 60;
+    let calcSec = Math.floor(timeGap / 1000) % 60;
+    
+    //To display the time as 2 digits number
+    hour.innerHTML = calcHour < 10 ? '0' + calcHour :calcHour;
+    min.innerHTML = calcMin < 10 ? '0' + calcMin :calcMin;
+    sec.innerHTML = calcSec < 10 ? '0' + calcSec :calcSec;
+}
+countdown();
+setInterval(countdown, 1000);
+
+
 let SPA_App = angular.module('spa_app', ['ngRoute']);
 SPA_App.config(function($routeProvider){
         $routeProvider
