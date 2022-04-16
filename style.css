@@ -195,7 +195,7 @@ h3 {
 
 /* Shop Blog */
 .shop-blog {
-    display: flex;
+    display: inline-block;
     justify-content: space-around;
     border: 5px solid yellow;
     margin: 3%; 
