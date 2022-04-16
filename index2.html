@@ -34,16 +34,16 @@
                     <span style="font-size:16px;">{{product.p_name}}</span>
                     <center><img ng-src = "{{product.p_image}}"/></center>
                     <div><label style="font-size:14px;">Price: ${{product.p_price}}</label></div>
-                    <center><button type = "button" class="btn btn-primary" ng-click = "add_cart(product)" ng-class="{'progress-bar': products.p_price>=120}"> Add to cart</button></center>
+                    <center><button type = "button" class="btn btn-primary" ng-click = "add_cart(product)"> Add to cart</button></center>
                 </div>
             </div>
         </div>
         <div class="col-4">
             <div class = "panel panel-primary">
                 <div class = "panel-heading">
-                    <div class="progress-container">
-                        <span class="progress-bar" id="myBar"></span>
-                    </div>
+                    <!-- <div class="progress-container">
+                        <span class="progress-bar" id="myBar" ng-init="progressBar(carts)"></span>
+                    </div> -->
                     <h5>MY CART</h5>
                 </div>
                 <div class = "panel-body table-responsive">
@@ -78,26 +78,26 @@ var app = angular.module("shoppingcart", [])
 .controller("shoppingCTR", function($scope){
     $scope.carts=[];
     $scope.products = [
-    {p_id: "1", p_name: "Colombian mediuam roast", p_image: "./img/coffee_bean1.jpg", p_price: 49.99},
-    {p_id: "2", p_name: "French roast coffee", p_image: "./img/coffee_bean2.jpg", p_price: 59.99},
-    {p_id: "3", p_name: "Tanzania dark roast", p_image: "./img/coffee_bean3.jpg", p_price: 54.99},
-    {p_id: "4", p_name: "Arabian coffee bean", p_image: "./img/coffee_bean4.jpg", p_price: 45.99},
+    {p_id: "1", p_name: "Colombian mediuam roast", p_image: "./img/coffee_bean1.jpg", p_price: 50},
+    {p_id: "2", p_name: "French roast coffee", p_image: "./img/coffee_bean2.jpg", p_price: 60},
+    {p_id: "3", p_name: "Tanzania dark roast", p_image: "./img/coffee_bean3.jpg", p_price: 55},
+    {p_id: "4", p_name: "Arabian coffee bean", p_image: "./img/coffee_bean4.jpg", p_price: 45},
     ];
                  
     $scope.add_cart = function(product){
         if(product){
             $scope.carts.push({p_id: product.p_id, p_name: product.p_name, p_price: product.p_price});
         }
-
-        $scope.progressBar = function(){
-            if($scope.products.p_price>=120){
-                $scope.myBar.style.width = 100 + "%";
-            }
-            if($scope.products.p_price<120){
-            $scope.myBar = $scope.products.p_price*100/120 + "%";
-            }
-            }
         }
+
+    // $scope.progressBar = function(){
+    //     if($scope.carts.p_price>=120){
+    //         document.getElementById('myBar').width = 100 + "%";
+    //     }
+    //     if($scope.carts.p_price<120){
+    //         document.getElementById('myBar').width = $scope.carts.p_price*100/120 + "%";
+    //     }
+    // }
     
                          
     $scope.total = 0;
@@ -153,7 +153,7 @@ var app = angular.module("shoppingcart", [])
     display: block;
     background-color: lightgreen;
     height: 10px;
-    width: 0%;
+    width: 20%;
 }
 </style>
 </body>   
