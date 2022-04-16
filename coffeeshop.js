@@ -1,3 +1,26 @@
+let coffeeApp = angular.module('home_app', []);
+coffeeApp.controller('ctrl1', function($scope) {
+    $scope.coffee = [
+        {coffeeName:"Nicaragua Coffee", coffeeImg: "./img/coffee_bean1.jpg", coffeePrice: "$49.99"},
+        {coffeeName:"Sumatra", coffeeImg: "./img/coffee_bean2.jpg", coffeePrice: "$59.99"},
+        {coffeeName:"Gravitas Brand", coffeeImg: "./img/coffee_bean3.jpg", coffeePrice: "$54.99"},
+        {coffeeName:"Costa Rica", coffeeImg: "./img/coffee_bean4.jpg", coffeePrice: "$45.99"},
+    ];
+
+    $scope.item_desc = [
+        {desc : "This coffee has a floral aroma followed by a sweetness reminiscent of nectarine and marzipan, and a bright flavour."},
+        {desc:"This coffee has a strong flavour with aromas reminiscent of forest floor and leather, and flavours reminiscent of maple syrup, baked marshmallow and spice cake."},
+        {desc:"This coffee has a rich flavour of morello cherries and spicy, rich molasses, with an aftertaste reminiscent of cocoa powder."},
+        {desc:"A well-balanced coffee with a flavour reminiscent of sweet orange and toasted pine nuts and a custard-like sweetness. Grown on the Bella Vista Estate in the Tres Rios region of Costa Rica, Central America. It is grown in an ideal region for coffee, with volcanic soil and extreme temperature differences between day and night."}
+    ];
+
+    $scope.blog = [
+        {title:"New Item will coming soon!", sentence:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus, voluptate!"},
+        {title:"3 Year Anniversary", sentence:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus, voluptate!"},
+        {title:"Now hiring!!", sentence:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus, voluptate!"},
+    ]
+})
+
 window.onload = function(){
     //Storing the images to array
     let images = [
@@ -69,10 +92,3 @@ countdown();
 setInterval(countdown, 1000);
 
 
-let SPA_App = angular.module('spa_app', ['ngRoute']);
-SPA_App.config(function($routeProvider){
-        $routeProvider
-        .when("/",{templateUrl:"./pages/#",controller:"question1_controller"})
-        .when("/question2",{templateUrl:"./pages/#",controller:"question2_controller"})
-        .otherwise({templateUrl:"./pages/404.html"});
-    });
