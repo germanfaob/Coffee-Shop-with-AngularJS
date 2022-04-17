@@ -1,0 +1,44 @@
+#bg-background{
+    background-color:#fff;
+    padding:10px;
+    border-radius:5px;
+}
+#product{
+    padding:5px;
+    clear:both;
+}
+#p_list{
+    width:250px;
+    max-width:250px;
+    height:300px;
+    padding:5px;
+    border:1px solid #000;
+    border-radius: 5px;
+    float:left;
+    margin:15px;
+}
+#p_list img{
+    height:200px; 
+    width:200px;
+}
+
+.progress-container{
+    width: 50%;
+    background-color: #ccc;
+    height: 10px;
+    position: relative;
+    margin: 1rem 0;
+}
+
+.progress-bar{
+    display: block;
+    background-color: lightgreen;
+    height: 10px;
+    width: 20%;
+}
+
+.side-bar {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
