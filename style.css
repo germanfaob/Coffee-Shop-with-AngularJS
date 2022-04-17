@@ -14,7 +14,11 @@ a, a:visited, a:hover, a:active {
   color: white;
   text-decoration: none;
 }
+
 /* Header */
+h1 {
+    display: inline-block;
+}
 nav {
     background-color: rgb(43, 84, 45);
     padding: 1em;

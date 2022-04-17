@@ -1,3 +1,4 @@
+// ********** Show the items with ng-repeat **********
 let coffeeApp = angular.module('home_app', []);
 coffeeApp.controller('ctrl1', function($scope) {
     $scope.coffee = [

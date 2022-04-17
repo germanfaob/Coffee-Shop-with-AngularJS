@@ -1,3 +1,4 @@
+// ********** Displaying and calculating the items user savedar **********
 var app = angular.module("shoppingcart", [])
 .controller("shoppingCTR", function($scope){
     $scope.carts=[];
@@ -45,7 +46,7 @@ addButton.addEventListener("click",()=>{
         }
 });
 
-//********** Send the userinfo(First name, Last name, Email, Phone number, Address) **********
+//********** Send the userinfo(First name, Last name, Email, Phone number, Address) to cookie**********
 fnameInfo = document.getElementById("exampleInputfname1");
 lnameInfo = document.getElementById("exampleInputlname1");
 emailInfo = document.getElementById("exampleInputEmail1");
