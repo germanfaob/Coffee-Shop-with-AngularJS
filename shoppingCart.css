@@ -1,3 +1,55 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Common */
+body {
+    background-color: #302826ff;
+    height: 100vh;
+}
+
+a, a:visited, a:hover, a:active {
+  color: white;
+  text-decoration: none;
+}
+
+
+/* Nav bar */
+nav {
+    background-color: rgb(43, 84, 45);
+    padding: 1em;
+    opacity: 0.7;
+}
+nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: flex-end;
+}
+nav ul li{
+    padding: 1em;
+    margin: 0 1em 0 1em;
+    border-radius: 8px;
+}
+
+nav ul li:hover{
+    background-color: #d8bca0;
+    color: lightslategray;
+    opacity: 1;
+}
+
+nav ul li a{
+    text-decoration: none;
+    color: whitesmoke;
+    opacity: 1;
+    font-size: 18px;
+}
+
+nav ul li a:hover{
+    color: black;
+}
+
 #bg-background{
     background-color:#fff;
     padding:10px;
@@ -37,8 +89,16 @@
     width: 20%;
 }
 
+/* Sidebar part */
 .side-bar {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+}
+
+.side-bar table {
+    color: whitesmoke;
+}
+.side-bar h5 {
+    color: whitesmoke;
 }
