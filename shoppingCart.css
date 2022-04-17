@@ -17,6 +17,9 @@ a, a:visited, a:hover, a:active {
 
 
 /* Nav bar */
+h1 {
+    display: inline-block;
+}
 nav {
     background-color: rgb(43, 84, 45);
     padding: 1em;
