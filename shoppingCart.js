@@ -30,19 +30,34 @@ var app = angular.module("shoppingcart", [])
     }
 });
 
-    //Send the userinfo(First name, Last name, Email, Phone number, Address)
-    fnameInfo = document.getElementById("exampleInputfname1");
-    lnameInfo = document.getElementById("exampleInputlname1");
-    emailInfo = document.getElementById("exampleInputEmail1");
-    phoneNumInfo = document.getElementById("exampleInputPhoneNum1");
-    addressInfo = document.getElementById("exampleInputAddress1");
+// ********** Purchase Progress Bar **********
+const progressBar = document.querySelector('.progress-bar');
+const addButton = document.querySelector('.add-item');
 
-    writeCookie = function() {
-      fnameCookieValue = fnameInfo.value;
-      lnameCookieValue = lnameInfo.value;
-      emailCookieValue = emailInfo.value;
-      phoneNumCookieValue = phoneNumInfo.value;
-      addressCookieValue = addressInfo.value;
-      document.cookie = fnameCookieValue + " " + lnameCookieValue + " " + emailCookieValue + " " + phoneNumCookieValue + " " + addressCookieValue;
-      console.log(document.cookie);
-    }
+addButton.addEventListener("click",()=>{
+    let price = 20;
+        if(price>=60){
+            progressBar.style.width = 100 + '%';
+            progressBar.innerHTML = "Shipping is free!!";
+        }if(price<60){
+            progressBar.style.width = price*100/60 + '%';
+            progressBar.innerHTML = 60-price + ' left for free shipping';
+        }
+});
+
+//********** Send the userinfo(First name, Last name, Email, Phone number, Address) **********
+fnameInfo = document.getElementById("exampleInputfname1");
+lnameInfo = document.getElementById("exampleInputlname1");
+emailInfo = document.getElementById("exampleInputEmail1");
+phoneNumInfo = document.getElementById("exampleInputPhoneNum1");
+addressInfo = document.getElementById("exampleInputAddress1");
+
+writeCookie = function() {
+    fnameCookieValue = fnameInfo.value;
+    lnameCookieValue = lnameInfo.value;
+    emailCookieValue = emailInfo.value;
+    phoneNumCookieValue = phoneNumInfo.value;
+    addressCookieValue = addressInfo.value;
+    document.cookie = fnameCookieValue + " " + lnameCookieValue + " " + emailCookieValue + " " + phoneNumCookieValue + " " + addressCookieValue;
+    console.log(document.cookie);
+}
