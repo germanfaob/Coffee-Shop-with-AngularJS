@@ -1,0 +1,104 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Common */
+body {
+    background-color: #302826ff;
+    height: 100vh;
+}
+
+a, a:visited, a:hover, a:active {
+  color: white;
+  text-decoration: none;
+}
+
+
+/* Nav bar */
+nav {
+    background-color: rgb(43, 84, 45);
+    padding: 1em;
+    opacity: 0.7;
+}
+nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: flex-end;
+}
+nav ul li{
+    padding: 1em;
+    margin: 0 1em 0 1em;
+    border-radius: 8px;
+}
+
+nav ul li:hover{
+    background-color: #d8bca0;
+    color: lightslategray;
+    opacity: 1;
+}
+
+nav ul li a{
+    text-decoration: none;
+    color: whitesmoke;
+    opacity: 1;
+    font-size: 18px;
+}
+
+nav ul li a:hover{
+    color: black;
+}
+
+#bg-background{
+    background-color:#fff;
+    padding:10px;
+    border-radius:5px;
+}
+#product{
+    padding:5px;
+    clear:both;
+}
+#p_list{
+    width:250px;
+    max-width:250px;
+    height:300px;
+    padding:5px;
+    border:1px solid #000;
+    border-radius: 5px;
+    float:left;
+    margin:15px;
+}
+#p_list img{
+    height:200px; 
+    width:200px;
+}
+
+.progress-container{
+    width: 50%;
+    background-color: #ccc;
+    height: 10px;
+    position: relative;
+    margin: 1rem 0;
+}
+
+.progress-bar{
+    display: block;
+    background-color: lightgreen;
+    height: 10px;
+    width: 20%;
+}
+
+/* Sidebar part */
+.side-bar {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.side-bar table {
+    color: whitesmoke;
+}
+.side-bar h5 {
+    color: whitesmoke;
+}
