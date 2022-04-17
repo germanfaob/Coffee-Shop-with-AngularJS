@@ -1,10 +1,10 @@
 let coffeeApp = angular.module('home_app', []);
 coffeeApp.controller('ctrl1', function($scope) {
     $scope.coffee = [
-        {coffeeName:"Nicaragua Coffee", coffeeImg: "./img/coffee_bean1.jpg", coffeePrice: "$49.99"},
-        {coffeeName:"Sumatra", coffeeImg: "./img/coffee_bean2.jpg", coffeePrice: "$59.99"},
-        {coffeeName:"Gravitas Brand", coffeeImg: "./img/coffee_bean3.jpg", coffeePrice: "$54.99"},
-        {coffeeName:"Costa Rica", coffeeImg: "./img/coffee_bean4.jpg", coffeePrice: "$45.99"},
+        {coffeeName:"Nicaragua Coffee", coffeeImg: "./img/coffee_bean1.jpg", coffeePrice: "$50"},
+        {coffeeName:"Sumatra", coffeeImg: "./img/coffee_bean2.jpg", coffeePrice: "$60"},
+        {coffeeName:"Gravitas Brand", coffeeImg: "./img/coffee_bean3.jpg", coffeePrice: "$55"},
+        {coffeeName:"Costa Rica", coffeeImg: "./img/coffee_bean4.jpg", coffeePrice: "$45"},
     ];
 
     $scope.item_desc = [
@@ -21,6 +21,7 @@ coffeeApp.controller('ctrl1', function($scope) {
     ]
 })
 
+// ********** Image Slider Part **********
 window.onload = function(){
     //Storing the images to array
     let images = [
